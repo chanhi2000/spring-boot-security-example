@@ -22,6 +22,8 @@ dependencies {
 	implementation(Dependencies.springBoot)
 	implementation(Dependencies.jackson)
 	implementation(Dependencies.kotlinStdlib)
+	implementation(Dependencies.jwt)
+	implementation(Dependencies.jaxb)
 	compileOnly(Dependencies.lombok)
 	annotationProcessor(Dependencies.lombok)
 	testImplementation(Dependencies.springBootTest)

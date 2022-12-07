@@ -9,6 +9,8 @@ object Versions {
 	const val springBootDepMan = "1.0.15.RELEASE"
 	const val spring = "5.3.24"
 
+	const val jwt = "0.9.1"
+	const val jaxb = "2.3.1"
 	const val logback = "1.2.11"
 	const val jackson = "2.13.4"
 	const val jacksonDatabind = "2.13.4.2"

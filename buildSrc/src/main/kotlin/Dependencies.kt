@@ -40,6 +40,12 @@ object Dependencies {
 		"org.jetbrains.kotlin:kotlin-scripting-compiler-embeddable:${Versions.kotlin}",
 		"org.jetbrains.kotlin:kotlin-sam-with-receiver:${Versions.kotlin}",
 	)
+    val jwt = listOf(
+        "io.jsonwebtoken:jjwt:${Versions.jwt}"
+    )
+    val jaxb = listOf(
+        "javax.xml.bind:jaxb-api:${Versions.jaxb}"
+    )
     val jackson = listOf(
         "com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.jackson}",
         "com.fasterxml.jackson.module:jackson-module-parameter-names:${Versions.jackson}",
