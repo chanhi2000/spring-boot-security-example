@@ -9,6 +9,7 @@ object Dependencies {
         "org.springframework.boot:spring-boot-starter-json:${Versions.springBoot}",
         "org.springframework.boot:spring-boot-starter-logging:${Versions.springBoot}",
         "org.springframework.boot:spring-boot-starter-tomcat:${Versions.springBoot}",
+        "org.springframework.boot:spring-boot-starter-security:${Versions.springBoot}",
     )
     val springBootTest = listOf(
         "org.springframework.boot:spring-boot-starter-test:${Versions.springBoot}",

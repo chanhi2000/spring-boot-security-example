@@ -1,4 +1,4 @@
-package com.example.markiiimark.springbootsecurityexample
+package com.example.markiiimark.springbootsecurityexample.controller
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
