@@ -14,13 +14,56 @@
 - Intellij Idea CE
 - Postman
 
+## Basic Auth.
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Backend
+    Client->>+Backend: HTTP Request (GET)
+    Backend->>Backend: Checks authorization
+    Backend-->>-Client: Returns 401 
+    Note over Backend,Client: UNAUTHORIZED
+    Client->>+Backend: HTTP Request (GET) => Basic64 username:password
+    Backend->>Backend: Checks username:password
+    Backend-->>-Client: Responds: 200
+    Note over Backend,Client: OK
+```
+
+## `curl` 호출 테스트
+
+### Basic Auth.
+
+#### ⚠️`401` Unauthorized
+
+_로그인 인증 없이_ 호출 했을 시 `401 Unauthorized` 응답결과 나오는지 확인
+
+```sh
+curl http://localhost:8080/api/v1/greetings
+```
+
+#### ✅ `200` Ok
+
+로그인 인증결과로 Basic Auth처리 후 호출 했을 시 `200 Ok` 응답결과가 나오는지 확인
+
+(예를들어) 인증결과는 스프링 부트 후 로그에 아래와 같이 기록된다.
+```
+...
+Using generated security password: 7dd436e6-1c3d-4dde-b09a-cb648b1fa400
+...
+```
+
+```sh
+curl http://localhost:8080/api/v1/greetings -u "user:7dd436e6-1c3d-4dde-b09a-cb648b1fa400"
+```
+
 ---
 ## ✅Task(s) Completed
 - [x] ~~initialize project~~
 - [x] ~~Bootstrap app~~
 - [x] ~~Create API~~
 - [x] ~~Install Spring Security~~
-- [ ] Implement basic authentication
+- [x] ~~Implement basic authentication~~
 - [ ] Implement JWT authentication filter
 - [ ] Implement JWT utils class and finalize the filter
 - [ ] Tell Spring to use the JWT filter
